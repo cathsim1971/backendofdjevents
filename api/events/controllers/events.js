@@ -58,7 +58,7 @@ module.exports = {
     if (!events) {
       return ctx.unauthorized(`You can't update this entry`);
     }
-
+ 
     const entity = await strapi.services.events.delete({ id });
     return sanitizeEntity(entity, { model: strapi.models.events });
   },
